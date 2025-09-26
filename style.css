@@ -1,0 +1,268 @@
+/* Aturan Umum untuk Container */
+.container {
+    width: 90%;             /* Lebar container adalah 90% dari lebar layar */
+    max-width: 1200px;      /* Batas lebar MAKSIMAL adalah 1200px */
+    margin: 0 auto;         /* Trik untuk membuat container selalu di tengah */
+}
+
+/* Pengaturan Dasar */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigasi */                              
+.navbar {   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d1cccc;
+    padding: 1rem 2rem;                                                                                                                                                                                         
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    background-image: url('../images/background-utama.jpg'); /* Ganti dengan foto background terbaik Anda */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Lapisan gelap agar teks mudah dibaca */
+    padding: 2rem 4rem;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Cuplikan Galeri */
+/* === BAGIAN GALERI (KODE PERBAIKAN) === */
+
+/* === BAGIAN GALERI (KODE RESPONSIF) === */
+
+.gallery-preview {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-grid img {
+    width: 33.3%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+/* Footer */        
+/* --- FOOTER UNTUK HAK CIPTA --- */
+footer {
+    /* Background transparan: Cukup tidak perlu memberi background-color */
+    padding: 30px 0; /* Memberi jarak atas dan bawah dari teks */
+    margin-top: 50px; /* Jarak dari konten di atasnya */
+    /* text-align: center; Ini akan diwariskan dari .container jika ada */
+}
+
+footer .container {
+    /* Pastikan container di footer punya lebar dan margin auto */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* KUNCI: Menengahkan teks di dalam container footer */
+}
+
+footer p {
+    font-size: 0.9rem; /* Ukuran font sedikit lebih kecil agar elegan */
+    color: #949494;      /* Warna teks abu-abu gelap agar tidak terlalu mencolok */
+    margin: 0;        /* Penting: Hapus margin default pada paragraf */
+    line-height: 1.5; /* Jarak antar baris teks */
+}
+
+/* Atur struktur utama halaman */
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Membuat elemen di body tersusun ke bawah */
+    min-height: 100vh;      /* KUNCI 1: Tinggi body minimal setinggi layar */
+}
+
+/* Dorong footer ke bawah */
+footer {
+    width: 100%;
+    padding: 30px 0;
+    margin-top: auto;       /* KUNCI 2: Mendorong footer ke paling bawah */
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #a7a7a7;
+    margin: 0;
+}
+
+/* Style untuk Ikon Media Sosial di Halaman Kontak */
+.social-media {
+    margin-top: 20px; /* Jarak dari item di atasnya */
+}
+
+.social-media a {
+    display: flex;           /* Membuat logo dan teks sejajar */
+    align-items: center;     /* Menyelaraskan logo dan teks di tengah secara vertikal */
+    text-decoration: none;   /* Menghilangkan garis bawah dari link */
+    color: #333;             /* Warna teks */
+    transition: color 0.3s;  /* Animasi halus saat warna berubah */
+}
+
+.social-media img {
+    width: 30px;             /* Atur ukuran lebar logo */
+    height: 30px;            /* Atur ukuran tinggi logo */
+    margin-right: 12px;      /* Jarak antara logo dan teks */
+}
+
+.social-media span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Efek saat mouse diarahkan ke link (opsional) */
+.social-media a:hover {
+    color: #c13584; /* Warna khas Instagram */
+}
+
+
+/* === GAYA UNTUK CUPLIKAN GALERI DI BERANDA === */
+.halaman-beranda .gallery-preview {
+    /* Gaya khusus untuk section preview di beranda */
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.halaman-beranda .image-grid {
+    /* Gaya untuk grid di beranda */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.halaman-beranda .image-grid img {
+    /* Gaya untuk gambar di beranda (terpotong agar seragam) */
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+
+/* === ELEGANT GALLERY DESIGN ===
+
+/* Container for the entire gallery section */
+.gallery-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto; /* Adds space above/below and centers the section */
+    padding: 20px;
+}
+
+/* Title for the gallery */
+.gallery-title {
+    text-align: center;
+    font-size: 2.5rem; /* Larger font for the main title */
+    color: #333;
+    margin-bottom: 40px; /* Space between title and photos */
+}
+
+/* Grid container for the images */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 25px; /* Space between each photo card */
+}
+
+/* Individual photo card style */
+.photo-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 10px;       /* Softer, rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    overflow: hidden;          /* Ensures image respects the rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px); /* Lifts the card slightly on hover */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;             /* Uniform height for a clean grid */
+    object-fit: cover;         /* Ensures images fill the space without distortion */
+    display: block;
+} */
