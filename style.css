@@ -266,3 +266,49 @@ footer p {
     object-fit: cover;         /* Ensures images fill the space without distortion */
     display: block;
 } */
+
+/* ========================================= */
+/* === ATURAN DESAIN RESPONSIF (MOBILE) === */
+/* ========================================= */
+
+/* Terapkan gaya ini jika lebar layar 768px atau kurang (ukuran tablet & HP) */
+@media (max-width: 768px) {
+
+    /* Atur ulang container agar tidak terlalu mepet */
+    .container {
+        width: 90%;
+    }
+
+    /* --- Navigasi --- */
+    /* Kode ini akan menyembunyikan menu desktop dan mempersiapkan untuk menu mobile (hamburger menu) di masa depan */
+    header nav ul {
+        display: none; /* Sembunyikan menu navigasi desktop */
+        /* Anda nantinya bisa menambahkan ikon hamburger di sini */
+    }
+
+    /* --- Halaman Galeri --- */
+    .gallery-title {
+        font-size: 2rem; /* Perkecil ukuran judul */
+    }
+
+    .image-grid {
+        /* Ubah grid dari 3 kolom menjadi 1 kolom di HP */
+        grid-template-columns: 1fr;
+        gap: 20px; /* Kurangi jarak antar foto */
+    }
+
+    /* --- Halaman Kontak --- */
+    .contact-content {
+        /* Ubah layout dari 2 kolom menjadi 1 kolom */
+        grid-template-columns: 1fr;
+    }
+
+    /* Atur ulang ukuran font secara umum agar nyaman dibaca di HP */
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
