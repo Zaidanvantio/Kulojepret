@@ -279,36 +279,55 @@ footer p {
         width: 90%;
     }
 
-    /* --- Navigasi --- */
-    /* Kode ini akan menyembunyikan menu desktop dan mempersiapkan untuk menu mobile (hamburger menu) di masa depan */
+    /* ========================================= */
+/* === ATURAN DESAIN RESPONSIF (MOBILE) === */
+/* ========================================= */
+
+/* Terapkan gaya ini jika lebar layar 768px atau kurang */
+@media (max-width: 768px) {
+
+    /* --- 1. Perbaikan Header / Navigasi --- */
+    header .container {
+        /* Mengatur ulang layout header */
+        flex-direction: column; /* Susun logo dan nav dari atas ke bawah */
+        gap: 15px;              /* Beri jarak antara logo dan nav */
+    }
+
+    header nav {
+        /* Pastikan menu tidak keluar dari layar */
+        width: 100%;
+    }
+
     header nav ul {
-        display: none; /* Sembunyikan menu navigasi desktop */
-        /* Anda nantinya bisa menambahkan ikon hamburger di sini */
+        /* Tampilkan link menu secara rapi di tengah */
+        justify-content: center;
+        flex-wrap: wrap; /* Izinkan menu untuk pindah ke baris baru jika tidak cukup */
+        gap: 15px 20px;
     }
-
-    /* --- Halaman Galeri --- */
-    .gallery-title {
-        font-size: 2rem; /* Perkecil ukuran judul */
+    
+    /* Alternatif jika ingin menyembunyikan menu (untuk hamburger menu nanti) */
+    /* header nav ul {
+        display: none; 
     }
+    */
 
-    .image-grid {
-        /* Ubah grid dari 3 kolom menjadi 1 kolom di HP */
+
+    /* --- 2. Perbaikan Grid Foto di Beranda ("Our Newest Client") --- */
+    .halaman-beranda .image-grid {
+        /* Paksa grid di beranda menjadi 1 kolom di mobile */
         grid-template-columns: 1fr;
-        gap: 20px; /* Kurangi jarak antar foto */
     }
 
-    /* --- Halaman Kontak --- */
+
+    /* --- 3. Perbaikan Umum Lainnya --- */
+    .gallery-title,
+    .section-title {
+        font-size: 1.8rem; /* Perkecil ukuran semua judul section */
+    }
+
+    /* Memastikan semua grid di halaman lain juga menjadi 1 kolom */
+    .image-grid,
     .contact-content {
-        /* Ubah layout dari 2 kolom menjadi 1 kolom */
         grid-template-columns: 1fr;
-    }
-
-    /* Atur ulang ukuran font secara umum agar nyaman dibaca di HP */
-    body {
-        font-size: 16px;
-    }
-
-    h1 {
-        font-size: 2.2rem;
     }
 }
