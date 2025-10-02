@@ -3,43 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kulo.Jepret</title>
+    <title>Kulo.Jepret - Beranda</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body class="halaman-beranda">
-    </body>
 
-    <nav class="navbar">
-        <a href="index.html" class="logo">Kulo.Jepret</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Beranda</a></li>
-            <li><a href="galeri.html">Galeri</a></li>
-            <li><a href="kontak.html">Kontak</a></li>
-        </ul>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Capturing Moments Creating Memories</h1>
-            <p>Ready to Capture Your Most Beautiful Moments</p>
-            <a href="galeri.html" class="cta-button">View Gallery</a>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="images/Kulojepret.png" alt="Logo Kulo.Jepret">
+                <span>Kulo.Jepret</span>
+            </a>
+            <nav class="nav-links" id="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="galeri.html">Gallery</a></li>
+                    <li><a href="kontak.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <section class="gallery-preview">
-        <h2>Our Newest Client</h2>
-        <div class="image-grid">
-            <img src="images/DSC_3372.jpg" alt="Contoh Foto 1">
-            <img src="images/DSC_3142.jpg" alt="Contoh Foto 2">
-            <img src="images/DSC_3215.jpg" alt="Contoh Foto 3">
+    <main>
+        <section class="hero">
+            <div class="swiper hero-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image: url('images/DSC_7768.JPG');"></div>
+                </div>
+            </div>
+            <div class="hero -overlay"></div>
         </div>
-    </section>
-  <footer>
-  <div class="container">
-        <p>&copy; 2025 Kulo.Jepret. Semua Hak Cipta Dilindungi.</p>
-    </div>
-</footer>
+        
+            <div class="hero-content">
+                <h1>Capturing Moments, Creating Memories</h1>
+                <p>Ready to Capture Your Most Beautiful Moments</p>
+                <a href="galeri.html" class="cta-button">View Gallery</a>
+            </div>
+        </section>
 
+        <section class="gallery-container">
+            <div class="container">
+                <h2 class="section-title">Our Newest Client</h2>
+                <div class="image-grid">
+                    <img src="images/DSC_3372.jpg" alt="Contoh Foto 1">
+                    <img src="images/DSC_3142.jpg" alt="Contoh Foto 2">
+                    <img src="images/DSC_3215.jpg" alt="Contoh Foto 3">
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kulo.Jepret. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      AOS.init(); // Pastikan AOS.init() dipanggil
+    </script>
 </body>
 </html>

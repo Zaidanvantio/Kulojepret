@@ -1,218 +1,261 @@
-/* Aturan Umum untuk Container */
-.container {
-    width: 90%;             /* Lebar container adalah 90% dari lebar layar */
-    max-width: 1200px;      /* Batas lebar MAKSIMAL adalah 1200px */
-    margin: 0 auto;         /* Trik untuk membuat container selalu di tengah */
-}
+/* === PENGATURAN DASAR & UMUM === */
 
-/* Pengaturan Dasar */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-/* Navigasi */                              
-.navbar {   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #d1cccc;
-    padding: 1rem 2rem;                                                                                                                                                                                         
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #555;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    color: #007BFF;
-}
-
-/* Hero Section */
-.hero {
-    height: 80vh;
-    background-image: url('../images/background-utama.jpg'); /* Ganti dengan foto background terbaik Anda */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.hero-content {
-    background-color: rgba(0, 0, 0, 0.5); /* Lapisan gelap agar teks mudah dibaca */
-    padding: 2rem 4rem;
-    border-radius: 10px;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 1rem 2rem;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-/* Cuplikan Galeri */
-/* === BAGIAN GALERI (KODE PERBAIKAN) === */
-
-/* === BAGIAN GALERI (KODE RESPONSIF) === */
-
-.gallery-preview {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.image-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.image-grid img {
-    width: 33.3%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-/* Footer */        
-/* --- FOOTER UNTUK HAK CIPTA --- */
-footer {
-    /* Background transparan: Cukup tidak perlu memberi background-color */
-    padding: 30px 0; /* Memberi jarak atas dan bawah dari teks */
-    margin-top: 50px; /* Jarak dari konten di atasnya */
-    /* text-align: center; Ini akan diwariskan dari .container jika ada */
-}
-
-footer .container {
-    /* Pastikan container di footer punya lebar dan margin auto */
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center; /* KUNCI: Menengahkan teks di dalam container footer */
-}
-
-footer p {
-    font-size: 0.9rem; /* Ukuran font sedikit lebih kecil agar elegan */
-    color: #949494;      /* Warna teks abu-abu gelap agar tidak terlalu mencolok */
-    margin: 0;        /* Penting: Hapus margin default pada paragraf */
-    line-height: 1.5; /* Jarak antar baris teks */
-}
-
-/* Atur struktur utama halaman */
 html {
     height: 100%;
 }
 
 body {
     display: flex;
-    flex-direction: column; /* Membuat elemen di body tersusun ke bawah */
-    min-height: 100vh;      /* KUNCI 1: Tinggi body minimal setinggi layar */
-}
-
-/* Dorong footer ke bawah */
-footer {
-    width: 100%;
-    padding: 30px 0;
-    margin-top: auto;       /* KUNCI 2: Mendorong footer ke paling bawah */
-    text-align: center;
-}
-
-footer p {
-    font-size: 0.9rem;
-    color: #a7a7a7;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Arial', sans-serif;
     margin: 0;
+    padding: 0;
+    background-color: #efe8e8;
+    color: #333;
 }
 
-/* Style untuk Ikon Media Sosial di Halaman Kontak */
-.social-media {
-    margin-top: 20px; /* Jarak dari item di atasnya */
-}
-
-.social-media a {
-    display: flex;           /* Membuat logo dan teks sejajar */
-    align-items: center;     /* Menyelaraskan logo dan teks di tengah secara vertikal */
-    text-decoration: none;   /* Menghilangkan garis bawah dari link */
-    color: #333;             /* Warna teks */
-    transition: color 0.3s;  /* Animasi halus saat warna berubah */
-}
-
-.social-media img {
-    width: 30px;             /* Atur ukuran lebar logo */
-    height: 30px;            /* Atur ukuran tinggi logo */
-    margin-right: 12px;      /* Jarak antara logo dan teks */
-}
-
-.social-media span {
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* Efek saat mouse diarahkan ke link (opsional) */
-.social-media a:hover {
-    color: #c13584; /* Warna khas Instagram */
-}
-
-
-/* === GAYA UNTUK CUPLIKAN GALERI DI BERANDA === */
-.halaman-beranda .gallery-preview {
-    /* Gaya khusus untuk section preview di beranda */
+.container {
     width: 90%;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 0 auto;
+}
+
+/* === HEADER & NAVIGASI (VERSI FINAL) === */
+
+header {
+    background-color: #ffffff; /* Mengganti warna agar lebih bersih */
+    padding: 1rem 1;
+    border-bottom: 4px solid #fceded; /* Menambah garis bawah tipis */
+}
+
+main {
+    background-color: #ffffff; /* Saya ganti ke putih agar lebih bersih */
+    padding: 50px 0;
+    position: relative;
+    z-index: 5;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Menambah jarak antar menu */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+/* === HERO SECTION === */
+
+.hero {
+    height: 85vh;
+    color: rgba(255, 255, 255, 0.938);
+    position: relative;
+    
+    /* KUNCI: Tambahkan overflow dan border-radius DI SINI */
+    overflow: hidden;
+    border-radius: 50px; 
+}
+
+/* Div ini sekarang hanya untuk slider, tidak perlu lengkungan lagi */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* border-radius dan overflow dihapus dari sini */
+}
+
+.hero-slider.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slider .swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Sisanya biarkan sama */
+/* GANTI DAN TAMBAHKAN ATURAN INI DI style.css ANDA */
+
+/* Lapisan gelap di atas slider agar teks mudah dibaca */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none; /* KUNCI: Membuat lapisan ini 'tembus pandang' untuk klik/swipe */
+}
+
+/* Konten teks di lapisan paling atas */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 90%;
+    max-width: 1000px;
     text-align: center;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    pointer-events: none; /* Biarkan swipe 'menembus' kotak ini juga */
 }
 
-.halaman-beranda .image-grid {
-    /* Gaya untuk grid di beranda */
+/* PENTING: Aktifkan kembali interaksi untuk elemen di dalam hero-content */
+.hero-content h1,
+.hero-content p,
+.hero-content .cta-button {
+    pointer-events: auto; /* Izinkan teks dan tombol untuk diklik/dipilih kembali */
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    /* ...gaya cta-button Anda... */
+}
+
+/* Tombol CTA yang transparan */
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: rgba(0, 123, 255, 0.7); /* Biru transparan */
+    color: white;
+    text-decoration: none;
+    border-radius: 30px; /* Lebih elips untuk tombol */
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none; /* Hapus border default */
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3); /* Sedikit bayangan pada tombol */
+}
+
+.cta-button:hover {
+    background-color: rgba(0, 123, 255, 0.9); /* Sedikit lebih pekat saat hover */
+    transform: translateY(-2px);
+}
+
+/* Biarkan gaya h1 dan cta-button tetap sama */
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.cta-button {
+    /* ...gaya cta-button Anda sebelumnya... */
+}
+
+/* === BAGIAN GALERI (UMUM) === */
+
+.gallery-container {
+    padding: 20px 0;
+}
+
+.section-title, .gallery-title {
+    text-align: center;
+    font-size: 2.5 rem;
+    color: #8b8b8b;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/*.image-grid*/
+.image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 10px;
+    
+    /* Default untuk layar besar (desktop): 3 kolom */
+    grid-template-columns: repeat(3, 1fr); 
 }
 
+/* Aturan untuk layar menengah (tablet) */
+@media (max-width: 992px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Aturan untuk layar kecil (HP) */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.photo-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.photo-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* KHUSUS BERANDA: Menggunakan gaya yang lebih simpel */
 .halaman-beranda .image-grid img {
-    /* Gaya untuk gambar di beranda (terpotong agar seragam) */
     width: 100%;
     height: 250px; 
     object-fit: cover;
@@ -220,114 +263,70 @@ footer p {
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
+/* === HALAMAN KONTAK === */
 
-/* === ELEGANT GALLERY DESIGN ===
-
-/* Container for the entire gallery section */
-.gallery-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto; /* Adds space above/below and centers the section */
-    padding: 20px;
+.social-media {
+    margin-top: 20px;
 }
 
-/* Title for the gallery */
-.gallery-title {
-    text-align: center;
-    font-size: 2.5rem; /* Larger font for the main title */
+.social-media a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
     color: #333;
-    margin-bottom: 40px; /* Space between title and photos */
+    transition: color 0.3s;
 }
 
-/* Grid container for the images */
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 25px; /* Space between each photo card */
+.social-media img {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
 }
 
-/* Individual photo card style */
-.photo-card {
-    background-color: #ffffff; /* White background for the card */
-    border-radius: 10px;       /* Softer, rounded corners */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Subtle shadow for depth */
-    overflow: hidden;          /* Ensures image respects the rounded corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.social-media span {
+    font-weight: bold;
+    font-size: 18px;
 }
 
-.photo-card:hover {
-    transform: translateY(-5px); /* Lifts the card slightly on hover */
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* Stronger shadow on hover */
+.social-media a:hover {
+    color: #c13584;
 }
 
-.photo-card img {
+/* === FOOTER === */
+
+footer {
     width: 100%;
-    height: 250px;             /* Uniform height for a clean grid */
-    object-fit: cover;         /* Ensures images fill the space without distortion */
-    display: block;
-} */
+    padding: 30px 0;
+    margin-top: auto;
+    text-align: center;
+}
 
-/* ========================================= */
+footer p {
+    font-size: 0.9rem;
+    color: #919090;
+    margin: 0;
+}
+
 /* === ATURAN DESAIN RESPONSIF (MOBILE) === */
-/* ========================================= */
 
-/* Terapkan gaya ini jika lebar layar 768px atau kurang (ukuran tablet & HP) */
 @media (max-width: 768px) {
-
-    /* Atur ulang container agar tidak terlalu mepet */
-    .container {
-        width: 90%;
+    .nav-links {
+        display: none; /* Sembunyikan menu di mobile, persiapkan untuk hamburger */
     }
 
-    /* ========================================= */
-/* === ATURAN DESAIN RESPONSIF (MOBILE) === */
-/* ========================================= */
-
-/* Terapkan gaya ini jika lebar layar 768px atau kurang */
-@media (max-width: 768px) {
-
-    /* --- 1. Perbaikan Header / Navigasi --- */
     header .container {
-        /* Mengatur ulang layout header */
-        flex-direction: column; /* Susun logo dan nav dari atas ke bawah */
-        gap: 15px;              /* Beri jarak antara logo dan nav */
-    }
-
-    header nav {
-        /* Pastikan menu tidak keluar dari layar */
-        width: 100%;
-    }
-
-    header nav ul {
-        /* Tampilkan link menu secara rapi di tengah */
         justify-content: center;
-        flex-wrap: wrap; /* Izinkan menu untuk pindah ke baris baru jika tidak cukup */
-        gap: 15px 20px;
     }
     
-    /* Alternatif jika ingin menyembunyikan menu (untuk hamburger menu nanti) */
-    /* header nav ul {
-        display: none; 
+    .hero h1 {
+        font-size: 2rem;
     }
-    */
-
-
-    /* --- 2. Perbaikan Grid Foto di Beranda ("Our Newest Client") --- */
-    .halaman-beranda .image-grid {
-        /* Paksa grid di beranda menjadi 1 kolom di mobile */
+    
+    .section-title, .gallery-title {
+        font-size: 1.8rem;
+    }
+    
+    .image-grid, .contact-content {
         grid-template-columns: 1fr;
     }
-
-
-    /* --- 3. Perbaikan Umum Lainnya --- */
-    .gallery-title,
-    .section-title {
-        font-size: 1.8rem; /* Perkecil ukuran semua judul section */
-    }
-
-    /* Memastikan semua grid di halaman lain juga menjadi 1 kolom */
-    .image-grid,
-    .contact-content {
-        grid-template-columns: 1fr;
-    }
-}
+} 
