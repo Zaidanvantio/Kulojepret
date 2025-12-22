@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
 // Inisialisasi Swiper untuk Hero Section (hanya jika ada slider di halaman)
 const heroSlider = document.querySelector('.hero-slider');
 if (heroSlider) {
@@ -23,7 +22,6 @@ if (heroSlider) {
         },
     });
 }
-
 
 // Inisialisasi AOS (Animasi saat Scroll)
 AOS.init({
